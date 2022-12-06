@@ -50,12 +50,13 @@ module.exports = {
         res.status(200).send(personDb)
     },
     changeAPerson: (req,res) =>{
-        let {name} = req.params
-        let {newSp} = req.newSp
+        let {nameChange} = req.params
+        let {newSpp} = req.query
+        console.log(nameChange,newSpp)
 
         for(i=0; i<personDb.length; i++){
-            if ( name === personDb[i].name)
-            personDb[i].sp = newSp
+            if ( nameChange === personDb[i].name)
+            personDb[i].sp = newSpp
             console.log(personDb[i])
         }
         res.status(200).send(personDb)

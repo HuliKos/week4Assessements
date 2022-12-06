@@ -68,9 +68,9 @@ const changeSpecialPower =(event) =>{
     event.preventDefault()
 
     const newSp = document.getElementById('newSp').value
-    const name = document.getElementById('name').value
+    const nameChange = document.getElementById('nameChange').value
 
-    axios.put(`http://localhost:4000/api/change/${name}`, {newSp}).then(res => {
+    axios.put(`http://localhost:4000/api/change/${nameChange}?newSpp=${newSp}`).then(res => {
         const data = res.data
         console.log(data)
     }).catch((err) =>console.log(err.message))

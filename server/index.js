@@ -14,7 +14,7 @@ app.get("/api/fortune", getFortune);
 app.get("/api/point", getPoints);
 app.post("/api/person", createNewPerson);
 app.delete("/api/delete/:name", deleteAPerson)
-app.put("/api/change/:name", changeAPerson)
+app.put("/api/change/:nameChange", changeAPerson)
 
 
 app.listen(4000, () => console.log("Server running on 4000"));
